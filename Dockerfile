@@ -14,6 +14,8 @@ FROM alpine:latest
 
 RUN apk upgrade --no-cache && apk add --no-cache icu-libs
 
+RUN mkdir "/DmrDatabase"
+
 WORKDIR /src
 
 COPY --from=build-env /publish /src
